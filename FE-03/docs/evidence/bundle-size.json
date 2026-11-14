@@ -1,0 +1,106 @@
+{
+  "measuredAt": "2026-10-25T15:25:40.961Z",
+  "buildDir": "dist",
+  "totals": {
+    "appJs": {
+      "raw": 895548,
+      "gzip": 282896
+    },
+    "serviceWorker": {
+      "file": "sw.js",
+      "raw": 71305,
+      "gzip": 22195
+    },
+    "css": {
+      "raw": 63381,
+      "gzip": 14571
+    }
+  },
+  "files": [
+    {
+      "file": "assets/firebase-BkGxAlJD.js",
+      "raw": 560278,
+      "gzip": 165651
+    },
+    {
+      "file": "assets/index-DkEdS-dY.js",
+      "raw": 172043,
+      "gzip": 56889
+    },
+    {
+      "file": "assets/vue-CFClnJwW.js",
+      "raw": 92099,
+      "gzip": 35193
+    },
+    {
+      "file": "sw.js",
+      "raw": 71305,
+      "gzip": 22195
+    },
+    {
+      "file": "assets/index-BKJX0lpZ.css",
+      "raw": 48691,
+      "gzip": 10207
+    },
+    {
+      "file": "assets/notifications-CVNUIHfa.js",
+      "raw": 28888,
+      "gzip": 8799
+    },
+    {
+      "file": "assets/SettingsView-B170Erz8.js",
+      "raw": 12734,
+      "gzip": 4952
+    },
+    {
+      "file": "assets/SyncView-CdzY7Div.js",
+      "raw": 12465,
+      "gzip": 4657
+    },
+    {
+      "file": "assets/JobEditorView-B74XVEja.js",
+      "raw": 10106,
+      "gzip": 3684
+    },
+    {
+      "file": "assets/SyncView-Gb9L2O_I.css",
+      "raw": 7922,
+      "gzip": 2051
+    },
+    {
+      "file": "assets/workbox-window.prod.es5-Bd17z0YL.js",
+      "raw": 5653,
+      "gzip": 2199
+    },
+    {
+      "file": "assets/SettingsView-lpYXF-T4.css",
+      "raw": 3567,
+      "gzip": 1171
+    },
+    {
+      "file": "assets/JobEditorView-DPjni659.css",
+      "raw": 3201,
+      "gzip": 1142
+    },
+    {
+      "file": "index.html",
+      "raw": 2987,
+      "gzip": 1287
+    },
+    {
+      "file": "assets/NotFoundView-_EfJhDHh.js",
+      "raw": 1068,
+      "gzip": 686
+    },
+    {
+      "file": "manifest.webmanifest",
+      "raw": 560,
+      "gzip": 300
+    },
+    {
+      "file": "assets/info-CRC9DwVC.js",
+      "raw": 214,
+      "gzip": 186
+    }
+  ]
+}

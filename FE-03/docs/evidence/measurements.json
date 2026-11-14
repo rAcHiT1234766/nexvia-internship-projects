@@ -1,0 +1,109 @@
+{
+  "measuredAt": "2026-10-25T15:55:43.989Z",
+  "environment": {
+    "build": "dist-e2e (production build, emulator mode)",
+    "browser": "Playwright Chromium (headless)",
+    "backend": "Firebase Auth + Firestore emulators on the same machine"
+  },
+  "results": {
+    "localSave": {
+      "description": "Save click to rendered job details (create, 10 runs)",
+      "runs": 10,
+      "medianMs": 8.1,
+      "minMs": 7,
+      "maxMs": 20.4,
+      "samplesMs": [
+        7,
+        7.4,
+        7.4,
+        7.5,
+        8,
+        8.1,
+        8.4,
+        8.6,
+        9.3,
+        20.4
+      ]
+    },
+    "warmOfflineLoad": {
+      "description": "Offline navigation start to first job list item (25 jobs, prepared profile, 5 runs)",
+      "runs": 5,
+      "medianMs": 164.4,
+      "minMs": 144.3,
+      "maxMs": 231.9,
+      "samplesMs": [
+        144.3,
+        149.5,
+        164.4,
+        192.3,
+        231.9
+      ]
+    },
+    "queueDrain": {
+      "description": "20 operations (2 jobs × create + 9 status edits), 3 runs",
+      "runs": 3,
+      "medianMs": 2435.2,
+      "minMs": 2211.5,
+      "maxMs": 3308.9,
+      "samplesMs": [
+        2211.5,
+        2435.2,
+        3308.9
+      ]
+    },
+    "reconcile50": {
+      "description": "50 server jobs; each full reconciliation reads 50 documents",
+      "firstDownload": {
+        "note": "sign-in submit to all jobs listed (auth + DB open + read + apply)",
+        "runs": 3,
+        "medianMs": 235.8,
+        "minMs": 214.9,
+        "maxMs": 239.6,
+        "samplesMs": [
+          214.9,
+          235.8,
+          239.6
+        ]
+      },
+      "repeatSync": {
+        "note": "Sync now with nothing changed (read + compare)",
+        "runs": 3,
+        "medianMs": 52,
+        "minMs": 48,
+        "maxMs": 53,
+        "samplesMs": [
+          48,
+          52,
+          53
+        ]
+      }
+    },
+    "reconcile200": {
+      "description": "200 server jobs; each full reconciliation reads 200 documents",
+      "firstDownload": {
+        "note": "sign-in submit to all jobs listed (auth + DB open + read + apply)",
+        "runs": 3,
+        "medianMs": 331.2,
+        "minMs": 316.4,
+        "maxMs": 331.9,
+        "samplesMs": [
+          316.4,
+          331.2,
+          331.9
+        ]
+      },
+      "repeatSync": {
+        "note": "Sync now with nothing changed (read + compare)",
+        "runs": 3,
+        "medianMs": 92.1,
+        "minMs": 84.3,
+        "maxMs": 107.1,
+        "samplesMs": [
+          84.3,
+          92.1,
+          107.1
+        ]
+      }
+    }
+  }
+}
