@@ -29,7 +29,7 @@ FE-03/   FieldLog (single Vite app)
   src/               Vue screens, Dexie storage, sync engine, service worker, push
   tests/             unit (Vitest), emulator (Firestore rules and sync), e2e (Playwright)
   firestore.rules    access policy
-  docs/              architecture, sync protocol, decisions, test matrix, evidence, images
+  docs/              architecture, sync protocol, decisions, test matrix, evidence, reflection, slides, images
 .github/workflows/ci.yml   runs both projects' checks on every push
 ```
 
@@ -166,9 +166,21 @@ Details: [architecture](FE-03/docs/architecture.md),
 
 Evidence: [evidence report](FE-03/docs/evidence.md),
 [requirements checklist](FE-03/docs/requirements-checklist.md),
-[progress](FE-03/docs/progress.md), screenshots in [FE-03/README.md](FE-03/README.md#screenshots).
+[progress](FE-03/docs/progress.md), [reflection](FE-03/docs/reflection.md), screenshots in
+[FE-03/README.md](FE-03/README.md#screenshots).
 
 ---
+
+## Presentations and reflections
+
+| | FE-01 Foundation UI | FE-03 FieldLog |
+|---|---|---|
+| Slides | [PDF](FE-01/docs/presentation/foundation-ui-slides.pdf) | [PowerPoint with speaker notes](FE-03/docs/presentation/fieldlog-final-presentation.pptx) |
+| Recorded talk | 9:10, live demo from about 3:40 to 6:08 | 10:41, live demo from about 3:00 to 5:15 |
+| Reflection | [FE-01/docs/reflection.md](FE-01/docs/reflection.md) | [FE-03/docs/reflection.md](FE-03/docs/reflection.md) |
+
+The recorded talks are in the Google Drive submission folder (FE-01 → `06-Presentation`,
+FE-03 → `05-Presentation`), not in this repository.
 
 ## Continuous integration
 
@@ -190,4 +202,5 @@ IDs quoted in the project documents can be found here too (for example `git show
 The workflow files inside `FE-01/.github/` and `FE-03/.github/` are the originals from those
 repositories; GitHub runs only the root workflow in this one.
 
-All names, customers and jobs shown in screenshots and demos are fictional.
+The jobs, customers and accounts in the screenshots are fictional. Real e-mail addresses that
+appeared in the FE-01 recording are blurred.

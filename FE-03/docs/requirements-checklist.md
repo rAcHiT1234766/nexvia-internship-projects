@@ -30,21 +30,21 @@ completed.
 | 20 | Required tests have actual results, blocked/not-run identified | Done | `docs/test-matrix.md` |
 | 21 | Current Lighthouse plus an explicit PWA checklist | Done (local) | `docs/evidence.md`, `docs/pwa-checklist.md`; deployed run Blocked |
 | 22 | Measurements identify device, data, method, environment, commit | Done (emulator) | `docs/evidence.md`, `docs/evidence/measurements.json` |
-| 23 | Demo, GitHub, architecture, protocol/data docs, setup | Done | Docs and setup (`README.md`, `docs/`). Live demo at https://fe-03-56215.web.app and a screen recording made on 2026-11-11 (Drive `01-Demo`); source on GitHub (https://github.com/rAcHiT1234766/F3-03) |
-| 24 | Ten-minute presentation and authentic reflection | Partial | 14-slide deck with speaker notes and a recorded ten-minute talk (Drive `05-Presentation`). Reflection: the intern's own answers, not finished yet (Drive `06-Reflection`) |
-| 25 | Submission folder and reviewer access verified | Not done yet | Google Drive folders `00-Start-Here` to `06-Reflection`; the submission material is kept outside this repository |
+| 23 | Demo, GitHub, architecture, protocol/data docs, setup | Done | Docs and setup (`README.md`, `docs/`). Live demo at https://fe-03-56215.web.app and a screen recording of the talk with the live demo, made on 2026-11-11 (Drive `05-Presentation`, demo at about 3:00–5:15); source in the submission repository https://github.com/rAcHiT1234766/nexvia-internship-projects (`FE-03/`), first built in https://github.com/rAcHiT1234766/F3-03 |
+| 24 | Ten-minute presentation and authentic reflection | Done | 14-slide deck with speaker notes (`docs/presentation/`) and the recorded talk, 10:41 (Drive `05-Presentation`). Reflection answering all ten questions: `docs/reflection.md` (Drive `06-Reflection`) |
+| 25 | Submission folder and reviewer access verified | Done | Google Drive submission folder, FE-03 part: `00-START-HERE` and `01-Demo` to `06-Reflection`. Shared as anyone with the link can view; every link checked while signed out on 2026-11-14 |
 
 ## Deliverables (§25)
 
 | Deliverable | Status | Location |
 |---|---|---|
-| Working demo (URL or recording) | Done | Live at https://fe-03-56215.web.app; screen recording of the talk and demo made on 2026-11-11 (Drive `01-Demo`) |
-| GitHub repository | Done | https://github.com/rAcHiT1234766/F3-03 (public), `main` pushed on 2026-11-01 |
+| Working demo (URL or recording) | Done | Live at https://fe-03-56215.web.app (sign-in required); screen recording of the talk with the live demo, made on 2026-11-11 (Drive `05-Presentation`, demo at about 3:00–5:15) |
+| GitHub repository | Done | https://github.com/rAcHiT1234766/F3-03 (public), `main` pushed on 2026-11-01; submitted as `FE-03/` in https://github.com/rAcHiT1234766/nexvia-internship-projects with its full history (2026-11-14) |
 | Architecture | Done | `docs/architecture.md` |
 | Data/API documentation | Done | `docs/sync-protocol.md` |
 | Test results | Done (local) | `docs/test-matrix.md`, `docs/evidence.md` |
 | Measurements | Done (emulator) | `docs/evidence.md` |
 | PWA evidence | Partial | `docs/pwa-checklist.md`, Lighthouse reports; install done on Android Chrome (T42); update on the deployed origin Not run |
 | Push evidence | Done (Android Chrome) | `docs/evidence.md` § Real push |
-| Presentation | Done | 14-slide deck with speaker notes, and the talk script (Drive `05-Presentation`) |
-| Reflection | In progress | The intern's own answers (Drive `06-Reflection`) |
+| Presentation | Done | 14-slide deck with speaker notes (`docs/presentation/`), the talk script and the recorded talk (Drive `05-Presentation`) |
+| Reflection | Done | `docs/reflection.md` (Drive `06-Reflection`) |

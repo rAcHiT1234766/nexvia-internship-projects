@@ -1,6 +1,6 @@
 # Submission index
 
-Prepared locally; no Google Drive folder or shared links have been created.
+Delivered on 14 Nov 2026 in the shared Google Drive submission folder (FE-01 part: `00-START-HERE` and folders `01-Demo` to `07-Reflection`), with every link checked while signed out. The code is submitted as `FE-01/` in https://github.com/rAcHiT1234766/nexvia-internship-projects.
 
 | Required artifact  | Local preparation                                                          | Actual completion                                                                                                                                                                                       |
 | ------------------ | -------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -9,11 +9,10 @@ Prepared locally; no Google Drive folder or shared links have been created.
 | Design             | Figma file with Tokens Studio sets and Variables; `packages/tokens/figma`  | Tokens exported, imported and shared: https://www.figma.com/design/SP7lRRZBFGGODBBi8uLCDk/I01                                                                                                           |
 | Architecture / API | `docs/architecture.md`, `docs/api.md`, `docs/decisions.md`                 | Foundation documentation prepared                                                                                                                                                                       |
 | Test evidence      | `docs/test-results.md`, manual-review queue, actual artifacts when present | See current report; no inferred passes                                                                                                                                                                  |
-| Presentation       | Slides PDF: `docs/presentation/foundation-ui-slides.pdf`                   | Deck (8 slides + 4 backups); recorded as a 9:10 video on 12 Nov 2026; upload pending                                                                                                                    |
+| Presentation       | Slides PDF: `docs/presentation/foundation-ui-slides.pdf`                   | Deck (8 slides + 4 backups); recorded as a 9:10 video on 12 Nov 2026; uploaded to Drive `06-Presentation` on 14 Nov 2026 with real e-mail addresses blurred                                             |
 | Reflection         | `docs/reflection.md`                                                       | Written 2 Nov 2026 with AI help, from project records and the owner's answers                                                                                                                           |
 | Published package  | Build/pack helper and release checklist                                    | Published 1 Nov 2026: https://www.npmjs.com/package/@rachitp72/foundation-ui (0.2.0, MIT)                                                                                                               |
 | Visual regression  | Explicit Chromatic script/workflow                                         | Baseline build 1 (191 snapshots); regression build 2 caught 57 changes, denied; builds 5 and 6 (0.2.0, from CI) reviewed and accepted. Storybook: https://main--6adb1ea72d119416b1620b45.chromatic.com/ |
 
-Once completed, assemble the seven folders described in the handover, include
-real links and version/revision identifiers, and verify reviewer access. Local
-files alone do not establish Drive delivery, hosting or publication.
+The seven folders hold real links and the reviewed commit, and reviewer access was
+checked while signed out (14 Nov 2026).
