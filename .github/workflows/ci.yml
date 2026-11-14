@@ -1,0 +1,116 @@
+# Runs both projects' checks. Each project lives in its own folder with its own lock file.
+# Deployments (GitHub Pages for FE-01, Firebase Hosting for FE-03) stay in the original
+# repositories, so this workflow only reads code and needs no secrets.
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  fe-01:
+    name: FE-01 Foundation UI
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: FE-01
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: FE-01/.nvmrc
+          cache: npm
+          cache-dependency-path: FE-01/package-lock.json
+      - run: npm ci
+      - run: npm run check
+      - run: npm run test:coverage
+      - run: npm run build:storybook
+      - run: npm run test:storybook
+      - run: npm run pack:check
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: fe-01-verification-evidence
+          path: |
+            FE-01/coverage
+            FE-01/artifacts
+            FE-01/apps/demo/dist
+            FE-01/packages/ui/storybook-static
+
+  fe-03-checks:
+    name: FE-03 FieldLog - checks
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: FE-03
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+          cache-dependency-path: FE-03/package-lock.json
+      - run: npm ci
+      - run: npm run lint
+      - run: npm run typecheck
+      - run: npm test
+      - run: npm run build-only
+
+  fe-03-emulator:
+    name: FE-03 FieldLog - rules and sync (emulators)
+    needs: fe-03-checks
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: FE-03
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+          cache-dependency-path: FE-03/package-lock.json
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: 21
+      - run: npm ci
+      - run: npm run test:rules
+      - run: npm run test:sync
+
+  fe-03-e2e:
+    name: FE-03 FieldLog - browser scenarios
+    needs: fe-03-checks
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: FE-03
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+          cache-dependency-path: FE-03/package-lock.json
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: 21
+      - run: npm ci
+      - run: npx playwright install --with-deps chromium
+      - run: npm run test:e2e
+        env:
+          CI: 'true'
+      - if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: fe-03-playwright-report
+          path: |
+            FE-03/playwright-report/
+            FE-03/test-results/
+          retention-days: 7
